@@ -27,7 +27,7 @@ server.use(cookieParser());
 
 server.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: `http://${process.env.HOST}:3000`,
     credentials: true,
   }),
 );
