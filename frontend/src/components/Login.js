@@ -1,4 +1,3 @@
-require('dotenv/config');
 import React, { useState, useContext, useEffect } from 'react';
 import { navigate } from '@reach/router';
 import { UserContext } from '../App';
@@ -10,7 +9,7 @@ const Login = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const result = await (await fetch(`http://${process.env.HOST}:4000/login`, {
+    const result = await (await fetch(`http://40.113.150.216:4000/login`, {
       method: 'POST',
       credentials: 'include', // Needed to include the cookie
       headers: {

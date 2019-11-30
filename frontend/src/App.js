@@ -14,7 +14,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   const logOutCallback = async () => {
-    await fetch(`http://${process.env.HOST}:4000/logout`, {
+    await fetch(`http://40.113.150.216:4000/logout`, {
       method: 'POST',
       credentials: 'include', // Needed to include the cookie
     });
@@ -27,7 +27,7 @@ function App() {
   // First thing, check if a refreshtoken exist
   useEffect(() => {
     async function checkRefreshToken() {
-      const result = await (await fetch(`http://${process.env.HOST}:4000/refresh_token`, {
+      const result = await (await fetch(`http://40.113.150.216:4000/refresh_token`, {
         method: 'POST',
         credentials: 'include', // Needed to include the cookie
         headers: {

@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, useContext } from 'react';
 import { UserContext } from '../App';
 
@@ -9,7 +10,7 @@ const Protected = () => {
 
   useEffect(() => {
     async function fetchProtected() {
-      const result = await (await fetch(`http://${process.env.HOST}:4000/protected`, {
+      const result = await (await fetch(`http://40.113.150.216:4000/protected`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
